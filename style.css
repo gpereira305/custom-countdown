@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,500&display=swap');
+
+
+* {
+  transition: all ease .4s;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #b8afc5;
+}
+
+/* ++++++++Video Background ++++++++*/
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 120vh;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* +++++++Container++++++ */
+.container {
+  color: #fff;
+  margin: 0 auto;
+  padding: 8% 50px;
+  border-radius: 5px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.input-container {
+  position: relative;
+  top: -30px;
+  width: 80%;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/*++++++ Form +++++++++*/
+label {
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+input {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 18px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  outline: none;
+  font-size: 20px;
+  color: rgb(128, 128, 128);
+}
+
+/* ++++++++Button+++++++ */
+button {
+  width: 98.5%;
+  height: 60px;
+  margin-top: 25px;
+  border: none;
+  text-transform: uppercase;
+  background: #06013c;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background: #120d4b;
+}
+
+/* ++++++++Countdown +++++++++*/
+ul {
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* +++++++Complete ++++++++++*/
+.complete {
+  position: relative;
+  top: -8px;
+}
+
+.complete-title {
+  animation: blinker 2s linear infinite;
+  color: rgb(255, 0, 0);
+}
+
+/*+++++++ Keyframes++++++ */
+@keyframes blinker {
+  50% {
+    opacity: 0;
+
+  }
+}
+
+
+/*++++++++++ Media Query +++++++++ */
+@media screen and (max-width: 1080px) {
+  .container {
+    margin: 50px;
+    padding: 8% 50px;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+  .container {
+    margin: 0 25px;
+    padding: 8% 20px;
+  }
+
+  .complete {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .container {
+    margin: 0 24px;
+    padding: 8% 20px;
+  }
+
+  .complete {
+    width: 85%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  video {
+    object-fit: cover;
+    object-position: 70%;
+    margin-top: -1px;
+  }
+
+  .video-background {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .container {
+    padding: 40px 0;
+    margin: 16px;
+  }
+
+  .input-container {
+    top: unset;
+  }
+
+  .countdown {
+    position: relative;
+    top: 10px;
+  }
+
+  .form {
+    width: unset;
+  }
+
+  input {
+    width: 93%;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+
+  li span {
+    font-size: 40px;
+  }
+}
